@@ -1,0 +1,239 @@
+:root {
+    --negro: #121826;
+    --blanco: #FFFFFF;
+    --casiBlanco: #F8FAFC;
+    --gris: #4D556233;
+    --grisFuerte: #4D5562;
+    --grisClaro: #E5E7EB;
+    --azul: #263FA9;
+    --cafe: #7C4F1E;
+    --fuentePrincipal: "Be Vietnam Pro", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before , *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 6.4rem;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+table {
+    margin-top: 5rem;
+}
+
+.header__contenedor {
+    max-width: 100%;
+}
+
+.header__contenido {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.header__titulo {
+    color: var(--negro);
+    padding-bottom: .5rem;
+}
+
+.header__texto {
+    margin-top: 0;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--grisFuerte);
+}
+
+
+/* TABLA */
+.planes__tabla {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    border-collapse: collapse;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    overflow: hidden; /* Asegura que el border-radius se aplique correctamente */
+}
+.planes__head {
+    padding-top: 2rem;
+    vertical-align: middle;
+    margin: 0;
+    text-align: center;
+}
+.head__titulo {
+    margin: 0;
+    color: var(--azul);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.head__precio {
+    margin: 0;
+}
+.head__plazo {
+    color: var(--grisFuerte);
+    margin: 0;
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+}
+.planes__popular {
+    padding-top: 2rem;
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-radius: 20px 20px 0 0;
+}
+.popular__titulo{
+    display: inline-block;
+    padding: 0 2rem;
+    margin: 0;
+    background-color: var(--azul);
+    border-radius: 20px;
+}
+.popular__precio{
+    margin: 0;
+}
+.popular__plazo {
+    margin: 0;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+.planes__fila {
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.planes__celda {
+    padding: 1.6rem 7rem 1.6rem 7rem;
+    text-align: center;
+    color: var(--grisFuerte);
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega "..." si el texto es demasiado largo */
+}
+
+.planes__celda--titulo {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--negro);
+    background-color: var(--casiBlanco);
+}
+
+/* Primera celda de la primera fila (esquina superior izquierda) */
+.planes__fila:first-child .planes__celda:first-child {
+    border-top-left-radius: 20px;
+}
+
+/* Primera celda de la última fila (esquina inferior izquierda) */
+.planes__fila:last-child .planes__celda:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.planes__celda--destacada {
+    text-align: center;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-weight: 300;
+    border-bottom: .1rem solid rgba(65, 56, 56, 10);
+    margin: 0;
+}
+.planes__celda--esquinArriba {
+    border-radius: 20px 0 0 0;
+}
+.planes__celda--esquinAbajo{
+    border-radius: 0 0 0 20px;
+}
+
+/* Eliminar la última línea en la columna negra */
+.planes__fila:last-child .planes__celda--destacada {
+    border-bottom: none;
+}
+
+.planes__check {
+    display: block;
+    margin: 0 auto;
+    width: 2rem;
+    height: 2rem;
+}
+/* Estilos para la imagen */
+.azul__texto, .cafe__texto, .direct__icon {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+    vertical-align: middle; /* Alineación vertical */
+    margin: 0; /* Elimina márgenes que puedan afectar */
+}
+
+.direct__icon {
+    width: 3rem;  /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.planes__azul {
+    text-align: center;
+    padding: 2rem 3rem;
+    color: var(--azul);
+    font-size: 1.8rem;
+}
+
+.planes__cafe {
+    text-align: center;
+    background-color: var(--cafe);
+    color: var(--blanco);
+    font-size: 1.8rem;
+    border-radius: 0 0 20px 20px;
+    padding: 2rem 3rem;
+}
+
+@media (max-width: 1024px) { 
+    .planes__head--free {
+        display: none;
+    }
+    .planes__celda--free {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) { 
+    .planes__head--team {
+        display: none;
+    }
+    .planes__celda--team {
+        display: none;
+    }
+}
+
